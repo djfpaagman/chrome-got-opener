@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "GoT mass unread bookmarks opener",
+  "short_name": "GoT Opener",
+  "description": "Adds a button to open all your unread bookmarks in new tabs.",
+  "version": "0.1",
+  "author": "Dennis Paagman",
+  "content_scripts": [
+    {
+      "matches": ["https://gathering.tweakers.net/forum/list_bookmarks"],
+      "js": ["gotOpener.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
